@@ -6,7 +6,6 @@
     <title>Гордость 39 школы</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Custom styles for smooth scrolling and font */
         html {
             scroll-behavior: smooth;
         }
@@ -19,10 +18,9 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
 
-    <!-- Header / Navigation -->
+    <!-- Шапка -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-            <!-- Requested Title in Moderate Red -->
             <div class="text-2xl md:text-3xl font-bold text-red-700 tracking-tight mb-4 md:mb-0 text-center md:text-left">
                 Гордость МБОУ ЦО 39
             </div>
@@ -36,7 +34,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Главный экран -->
     <section id="home" class="hero-pattern py-20 md:py-32">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
@@ -51,7 +49,7 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Статистика -->
     <section class="bg-white py-12 border-b border-slate-100">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -71,7 +69,7 @@
         </div>
     </section>
 
-    <!-- Hall of Fame / Honors Section -->
+    <!-- Доска почета -->
     <section id="honors" class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -79,7 +77,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Выдающиеся ученики</h2>
             </div>
 
-            <!-- Filters -->
+            <!-- Фильтры -->
             <div class="flex justify-center gap-4 mb-12 flex-wrap">
                 <button onclick="filterStudents('all')" class="filter-btn active px-4 py-2 rounded-full bg-red-100 text-red-800 font-medium hover:bg-red-200 transition-colors ring-2 ring-red-500 ring-offset-2">Все</button>
                 <button onclick="filterStudents('study')" class="filter-btn px-4 py-2 rounded-full bg-white text-slate-600 font-medium hover:bg-slate-100 border border-slate-200 transition-colors">Учеба</button>
@@ -87,14 +85,14 @@
                 <button onclick="filterStudents('art')" class="filter-btn px-4 py-2 rounded-full bg-white text-slate-600 font-medium hover:bg-slate-100 border border-slate-200 transition-colors">Творчество</button>
             </div>
 
-            <!-- Grid Container for Cards -->
+            <!-- Сетка карточек -->
             <div id="students-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cards will be injected by JS -->
+                <!-- Карточки добавляются через JS -->
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- О школе -->
     <section id="about" class="bg-slate-900 text-white py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-12">
@@ -114,7 +112,7 @@
         </div>
     </section>
 
-    <!-- Contact / Footer -->
+    <!-- Подвал -->
     <footer id="contact" class="bg-slate-950 text-slate-400 py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -142,9 +140,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Dynamic Content -->
+    <!-- СКРИПТ -->
     <script>
-        // Mock Data for Students
         const students = [
             {
                 id: 1,
@@ -153,7 +150,9 @@
                 title: "Лауреат нобелевской премии",
                 year: "2024",
                 desc: "Лауреат нобелевской премии по киданию апельсинов и король класса по укради брейронта.",
-                color: "bg-blue-100 text-blue-800"
+                color: "bg-blue-100 text-blue-800",
+                // ВОТ ЗДЕСЬ Я ВСТАВИЛ ВАШЕ ФОТО:
+                photo: "photo_2025-11-24_19-47-16.jpg"
             },
             {
                 id: 2,
@@ -181,7 +180,7 @@
                 year: "2024",
                 desc: "Крутая просто.",
                 color: "bg-blue-100 text-blue-800",
-                photo: "photo-2025-11-24_19-47-16.jpg"
+                photo: "https://i.pinimg.com/736x/94/8c/d5/948cd5f12f50a9b60218797290d22a93.jpg"
             },
             {
                 id: 5,
@@ -227,7 +226,7 @@
                 year: "2024",
                 desc: "Круто рисует.",
                 color: "bg-purple-100 text-purple-800",
-                photo: "photo_2025-11-24_20-09-56.jpg"
+                photo: "https://sun1-55.userapi.com/s/v1/ig2/XrRtkTUfeH70f-wSpT2eWMCAPen6XRRC2Oc_hxSAqIzxyvbg3471B6nPiby3ft3TST-AcY7HXhrrjyg-Tkm9vTtw.jpg?quality=96&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x479,540x539,640x639,720x719,761x760&from=bu&cs=761x0"
             },
             {
                 id: 10,
@@ -237,7 +236,7 @@
                 year: "2024",
                 desc: "Круто рисует x2.",
                 color: "bg-purple-100 text-purple-800",
-                photo: "photo_2025-11-24_19-47-16.jpg"
+                photo: "https://i.pinimg.com/736x/94/8c/d5/948cd5f12f50a9b60218797290d22a93.jpg"
             }
         ];
 
@@ -255,15 +254,22 @@
                 const card = document.createElement('div');
                 card.className = 'bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col';
                 
-                // Map category to Russian label
                 let catLabel = '';
                 if(student.category === 'study') catLabel = 'Учеба';
                 if(student.category === 'sport') catLabel = 'Спорт';
                 if(student.category === 'art') catLabel = 'Творчество';
 
+                // ЛОГИКА: Если есть фото - ставим фото, иначе - смайлик
+                let headerContent;
+                if (student.photo) {
+                    headerContent = `<img src="${student.photo}" alt="${student.name}" class="w-full h-full object-cover object-top">`;
+                } else {
+                    headerContent = `<span class="text-4xl">🎓</span>`;
+                }
+
                 card.innerHTML = `
-                    <div class="h-32 ${student.color} flex items-center justify-center">
-                        <span class="text-4xl">🎓</span>
+                    <div class="h-56 ${student.color} flex items-center justify-center relative overflow-hidden">
+                        ${headerContent}
                     </div>
                     <div class="p-6 flex-grow">
                         <div class="flex justify-between items-start mb-4">
@@ -284,27 +290,22 @@
         }
 
         function filterStudents(category) {
-            // Update buttons visual state
             buttons.forEach(btn => {
-                // Remove active classes
                 btn.classList.remove('bg-red-100', 'text-red-800', 'ring-2', 'ring-red-500', 'ring-offset-2');
-                // Add default classes
                 btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
             });
 
-            // Add active classes to clicked button
             const activeBtn = document.querySelector(`button[onclick="filterStudents('${category}')"]`);
-            activeBtn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
-            activeBtn.classList.add('bg-red-100', 'text-red-800', 'ring-2', 'ring-red-500', 'ring-offset-2');
-
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+                activeBtn.classList.add('bg-red-100', 'text-red-800', 'ring-2', 'ring-red-500', 'ring-offset-2');
+            }
             renderStudents(category);
         }
 
-        // Initial render
         document.addEventListener('DOMContentLoaded', () => {
             renderStudents('all');
         });
-
     </script>
 </body>
 </html>
