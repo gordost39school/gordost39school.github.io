@@ -6,9 +6,21 @@
     <title>Гордость 39 школы</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --font-soyuz: "Space Grotesk", sans-serif;
+        }
+
         html {
             scroll-behavior: smooth;
+            font-family: var(--font-soyuz);
         }
+        
+        body {
+            font-family: var(--font-soyuz);
+        }
+
         .hero-pattern {
             background-color: #fdf2f2;
             background-image: radial-gradient(#ef4444 0.5px, transparent 0.5px);
