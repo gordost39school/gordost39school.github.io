@@ -163,7 +163,6 @@
                 year: "2024",
                 desc: "Лауреат нобелевской премии по киданию апельсинов и король класса по укради брейронта.",
                 color: "bg-blue-100 text-blue-800"
-                // ФОТО УБРАНО
             },
             {
                 id: 2,
@@ -248,6 +247,15 @@
                 desc: "Круто рисует x2.",
                 color: "bg-purple-100 text-purple-800",
                 photo: "https://i.pinimg.com/736x/94/8c/d5/948cd5f12f50a9b60218797290d22a93.jpg"
+            },
+            {
+                id: 11,
+                name: "Артем Копанев",
+                category: "study",
+                title: "Диор саваж",
+                year: "2024",
+                desc: "Пуки каки диор саваж скибиди туалет наш.",
+                color: "bg-blue-100 text-blue-800"
             }
         ];
 
@@ -255,6 +263,7 @@
         const buttons = document.querySelectorAll('.filter-btn');
 
         function renderStudents(filter = 'all') {
+            if (!grid) return;
             grid.innerHTML = '';
             
             const filtered = filter === 'all' 
@@ -270,7 +279,6 @@
                 if(student.category === 'sport') catLabel = 'Спорт';
                 if(student.category === 'art') catLabel = 'Творчество';
 
-                // ЛОГИКА: Если есть фото - ставим фото, иначе - смайлик
                 let headerContent;
                 if (student.photo) {
                     headerContent = `<img src="${student.photo}" alt="${student.name}" class="w-full h-full object-cover object-top">`;
@@ -278,14 +286,15 @@
                     headerContent = `<span class="text-4xl">🎓</span>`;
                 }
 
-                // Высота h-64 для красивого фото, если оно есть
+                const textColorClass = student.color ? student.color.replace('bg-', 'text-').replace('100', '600') : 'text-blue-600';
+
                 card.innerHTML = `
                     <div class="h-64 ${student.color} flex items-center justify-center relative overflow-hidden">
                         ${headerContent}
                     </div>
                     <div class="p-6 flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <span class="text-xs font-bold uppercase tracking-wide ${student.color.replace('bg-', 'text-').replace('100', '600')} bg-opacity-20 px-2 py-1 rounded">
+                            <span class="text-xs font-bold uppercase tracking-wide ${textColorClass} bg-opacity-20 px-2 py-1 rounded">
                                 ${catLabel}
                             </span>
                             <span class="text-slate-400 text-sm">${student.year}</span>
